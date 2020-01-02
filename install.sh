@@ -1,8 +1,9 @@
 #!/bin/bash
 
 ### Init ###
-mkdir -p .temp
-cd .temp
+CURRENT_PWD=$(pwd)
+mkdir -p ~/.install
+cd ~/.install
 
 
 ### Drivers ###
@@ -66,6 +67,6 @@ fi
 
 
 ### Cleanup ###
-cd ..
-rm -r .temp
+rm -r ~/.install
+cd CURRENT_PWD
 sudo reboot
